@@ -1,14 +1,257 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/headshot.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Benjamin Barrera-Altuna</title>
-    <script type="module" crossorigin src="/assets/index-BtVx-I3B.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ShkJ88sr.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjamin Barrera</title>
+  <meta name="description" content="Personal website of Benjamin Barrera — software engineer, CS student at USF." />
+  <link rel="icon" type="image/png" href="./headshot.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#home" class="active">home</a>
+      <a href="#experience">experience</a>
+      <a href="#research">research</a>
+      <a href="#projects">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <h1>Benjamin Barrera</h1>
+      <p class="subtitle">Last updated: March 2026</p>
+
+      <hr />
+
+      <p class="intro">
+        I'm currently an Interactive AI Developer Intern at Leidos, where I build LangGraph agents
+        for automated data cleaning. Previously I've worked at Gradual, Bentley Systems, and
+        Transparency Wise across AI, backend, and full-stack roles.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Leidos</h3>
+          <span class="entry-meta">Aug 2025 – Present</span>
+        </div>
+        <p class="entry-role">Interactive AI Developer Intern · Tampa, FL</p>
+        <ul>
+          <li>Co-developed LangGraph recursive data-cleaning agent with tool backtracking and structured graph workflows
+            with over 20 tools for complex multi-step dataset cleaning</li>
+          <li>Researched and built a 23-function DataFrame evaluation framework to measure cleaning accuracy and detect
+            uncleaned/failed rows and columns, enabling automated quality analysis</li>
+          <li>Refined agent by improving prompts, adding uniform data sampling, and optimizing graph logic, achieving
+            52% token and 39% cost reduction (~379K → ~183K tokens) while maintaining cleaning accuracy</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Gradual</h3>
+          <span class="entry-meta">May 2025 – Aug 2025</span>
+        </div>
+        <p class="entry-role">Software Engineer Intern · San Francisco, CA</p>
+        <ul>
+          <li>Architected AI agents in Next.js with MCP integrations to GitHub, MongoDB, and ClickHouse to query 100GB+
+            of company events data and generate charts/graphs via AI SDK</li>
+          <li>Designed metadata-aware RAG pipeline using Chroma vector DB, reducing query context size by 9K tokens per
+            call and lowering LLM compute costs</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Bentley Systems</h3>
+          <span class="entry-meta">Jan 2025 – Apr 2025</span>
+        </div>
+        <p class="entry-role">Software Engineer Intern · Philadelphia, PA</p>
+        <ul>
+          <li>Refactored legacy C# (.NET) RESTful API endpoints for wind turbine energy calculation and optimized
+            response time by 9% via asynchronous calling, database indexing, and caching</li>
+          <li>Engineered 45 unit test cases (xUnit), validating codebase changes and ensuring calculation reliability
+          </li>
+          <li>Configured build pipelines for containerized (Docker) .NET service with Azure DevOps CI/CD YAML and
+            improved deployment time by 13% with concurrency jobs</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Transparency Wise</h3>
+          <span class="entry-meta">Aug 2023 – Jan 2025</span>
+        </div>
+        <p class="entry-role">Software Developer Intern · St. Petersburg, FL</p>
+        <ul>
+          <li>Built RAG app with React, Django (REST), and JWT auth that cut research paper surveying time by 17% using
+            multi-shot GPT-4o with LangChain for semantic indexing and conversation memory</li>
+          <li>Published paper on PyTorch multimodal models for verbal impairment detection using BERT, Wav2Vec,
+            Openpose, and Transformer fusion architectures, achieving 72% accuracy</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Research</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>City-Focused Air Quality Inference Learning</h3>
+        </div>
+        <p class="entry-role">Undergraduate Research · University of South Florida</p>
+        <p class="secondary-text" style="font-size: 0.9rem; margin-top: 0.35rem;">
+          Semi-supervised graph-based approach to infer real-time air quality (PM2.5) in unmonitored regions using
+          spatial data from OpenStreetMap and temporal data from PurpleAir sensors. Built a GRU + Graph Convolutional
+          Network pipeline over a grid-based city representation of Dallas, TX, achieving RMSE 12.13 on held-out test
+          data.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+          <a href="https://emerging-researchers.org/projects/123-7/" target="_blank" rel="noopener">Emerging
+            Researchers</a> · NCUR Presentation · Board #86
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Multilingual MCI Detection via Multimodal Analysis</h3>
+        </div>
+        <p class="entry-role">Published Research · University of South Florida</p>
+        <p class="secondary-text" style="font-size: 0.9rem; margin-top: 0.35rem;">
+          Proposed a multilingual mild cognitive impairment (MCI) detection model using multimodal approaches analyzing
+          acoustic and linguistic features. Outperforms existing ML models by identifying universal MCI indicators
+          across languages, finding that speech duration and pauses are crucial markers in multilingual settings.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=GEPH-8gAAAAJ&citation_for_view=GEPH-8gAAAAJ:u5HHmVD_uO8C"
+            target="_blank" rel="noopener">Google Scholar</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Space4All</h3>
+          <span class="entry-meta">Sept 2024 – Dec 2024</span>
+        </div>
+        <p class="tech-tag">Angular · Spring Boot · PostgreSQL · Supabase · Tailwind · Gemini API</p>
+        <ul>
+          <li>Constructed educational full-stack platform with Angular to teach planetology to K-12 with Gemini
+            batch-generated learning and testing cards along with leaderboard display, winning 5th place</li>
+          <li>Created Spring Boot backend with Supabase (PostgreSQL) and oversaw team of 2 to develop frontend</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>MedSave</h3>
+          <span class="entry-meta">June 2024 – Aug 2024</span>
+        </div>
+        <p class="tech-tag">ReactJS · Express · Node.js · MySQL · Gemini API</p>
+        <ul>
+          <li>Spearheaded application using ReactJS, Express, and MySQL (raw queries) to automate medical coding
+            translation for 100+ records of custom patient data using Gemini, achieving accuracy of 67%</li>
+          <li>Collaborated with local clinic, improving medical code conversion speed by 84%</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership">
+      <h2>Leadership</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>USF ColorStack Chapter</h3>
+          <span class="entry-meta">Aug 2024 – May 2025</span>
+        </div>
+        <p class="entry-role">Technology Lead · Tampa, FL</p>
+        <ul>
+          <li>Coordinated tech curriculum and presented 4 workshops to over 150+ students teaching data structures &
+            algorithms, backend (Django), frontend (React), and cloud deployment (AWS)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>University of South Florida</h3>
+          <span class="entry-meta">Expected May 2026</span>
+        </div>
+        <p class="education-details">
+          Bachelor of Science in Computer Science · GPA: 3.88<br />
+          Coursework: Data Structures & Algorithms, Operating Systems, Software Engineering, Databases
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+
+      <div class="skills-group">
+        <strong>Languages: </strong>
+        <span>TypeScript, JavaScript, C#, Python, Java, C++, SQL, NoSQL, HTML/CSS</span>
+      </div>
+      <div class="skills-group">
+        <strong>Frameworks: </strong>
+        <span>ASP.NET, Django, Spring Boot, Express, React, Angular</span>
+      </div>
+      <div class="skills-group">
+        <strong>Technologies: </strong>
+        <span>Azure DevOps, AWS, Docker, Git, Node.js, Tailwind, GraphQL, DynamoDB, Postman</span>
+      </div>
+      <div class="skills-group">
+        <strong>AI/ML: </strong>
+        <span>LangChain, LangGraph, PyTorch, RAG, Vector DBs (Chroma), OpenAI API, Gemini API, MCP, AI SDK</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:benbarrera13@gmail.com">email</a>
+        <a href="tel:+18132152097">813-215-2097</a>
+        <a href="https://github.com/BABTUNA" target="_blank" rel="noopener">github</a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Benjamin Barrera
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>

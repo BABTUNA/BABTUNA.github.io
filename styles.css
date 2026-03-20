@@ -1,0 +1,300 @@
+/* ========== Reset & Base ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f5f5;
+  --bg-nav: #f5f5f5;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --accent: #2563eb;
+  --border: #ddd;
+  --max-width: 650px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #111;
+  --bg-nav: #111;
+  --text: #e5e5e5;
+  --text-secondary: #aaa;
+  --text-muted: #777;
+  --accent: #60a5fa;
+  --border: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Nav ========== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+nav .theme-toggle {
+  position: absolute;
+  left: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--text);
+  padding: 0.25rem;
+  line-height: 1;
+}
+
+nav a {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: 700;
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0.9rem 1.2rem;
+  }
+
+  nav .theme-toggle {
+    position: static;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.35rem 0;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* ========== Main ========== */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ========== Sections ========== */
+section {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ========== Hero / Intro ========== */
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.02em;
+}
+
+.hero .subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .intro {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.hero .secondary-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ========== Section Headings ========== */
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+/* ========== Experience / Entry Items ========== */
+.entry {
+  margin-bottom: 1.75rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.entry-header h3 {
+  margin-bottom: 0;
+}
+
+.entry-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.entry-role {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.entry ul {
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+}
+
+.entry li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}
+
+/* ========== Skills ========== */
+.skills-group {
+  margin-bottom: 0.75rem;
+}
+
+.skills-group strong {
+  font-size: 0.9rem;
+}
+
+.skills-group span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ========== Education ========== */
+.education-details {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========== Contact / Footer ========== */
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ========== Tech tag styling (optional subtle) ========== */
+.tech-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
